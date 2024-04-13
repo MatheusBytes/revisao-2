@@ -6,7 +6,7 @@ const AlunoController = {
         res.json(await Aluno.find())
     },
     getAprovados: async (req, res) => {
-        res.json(await Aluno.find({media : {$gte:7}}))  // gt significa maior que 
+        res.json(await Aluno.find({media : {$gte:7}}))  // gt = significa maior e gte significa maior ou igual 
     },
     getReprovados: async (req, res) => {
         res.json(await Aluno.find({media : {$lt:5}}))  // lt significa menor que 
